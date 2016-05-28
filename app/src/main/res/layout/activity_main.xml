@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mehdi.githubuserapp.MainActivity">
+    
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/avatar"
+        android:layout_centerHorizontal="true"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/loginInfo"
+        android:layout_below="@+id/avatar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login :"
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login"
+            android:padding="10dp"/>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/idInfo"
+        android:layout_below="@+id/loginInfo">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID : "
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/id"
+            android:padding="10dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/reposInfo"
+        android:layout_below="@+id/idInfo">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public Repos: "
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/repos"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/reposInfo"
+        android:layout_marginTop="10dp"
+        android:id="@+id/main_pager">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to next page"
+        android:layout_below="@id/main_pager"
+        android:id="@+id/nextBtn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card View Sample App"
+        android:layout_toRightOf="@+id/nextBtn"
+        android:layout_below="@+id/main_pager"
+        android:id="@+id/card_view"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="popup"
+        android:id="@+id/popup"
+        android:layout_below="@id/card_view"/>
+
+    <ProgressBar
+        android:indeterminate="true"
+        android:id="@+id/marker_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_centerVertical="true"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_gravity="start"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <FrameLayout
+            android:id="@+id/mainActivity_content_frame"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content">
+            <include layout="@layout/navigation_drawer"/>
+        </FrameLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+
+
+</RelativeLayout>
